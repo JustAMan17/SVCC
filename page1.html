@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Portal | Sign in</title>
+    <link rel="stylesheet" href="log.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="loginForm">
+            <h1>Welcome Vicentians</h1>
+           
+            <div class="input-class">  
+                <i class='bx bxs-user'></i>
+                <input type="text" id="user" placeholder="Student ID" required>
+            </div>
+   
+            <div class="input-class">
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" id="pass" placeholder="Surname" required>
+            </div>
+   
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+   
+            <button type="submit" class="btn" id="logins">Login</button>
+   
+            <div class="register_link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const logbtn = document.getElementById("logins");
+        const usernames = document.getElementById("user");
+        const pasw = document.getElementById("pass");
+
+        function logs(event) {
+            event.preventDefault();
+            
+            if (usernames.value === "AY2023-00000" && pasw.value === "Salaum") {
+                window.location.href = "home.html";
+            } else {
+                alert("Incorrect username or password");
+            }
+        }
+
+        document.getElementById("loginForm").addEventListener('submit', logs);
+    </script>
+</body>
+</html>
