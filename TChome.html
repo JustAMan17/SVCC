@@ -1,17 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVCC Portal</title>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVCC Portal</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
     <nav>
@@ -21,7 +15,7 @@
             <li> <a href="#">About</a></li>
             <li> <a href="#">Help</a></li>
             <li> <a href="#">Settings</a></li>
-            <li> <a href="index.html">Logout</a></li>
+            <li> <a href="page1.html">Logout</a></li>
         </ul>
         <ul>
             <li> <a href="#">Hi, Professor!</a></li>
@@ -30,27 +24,18 @@
             <li> <a href="All_Grade.html">All Grades</a></li>
             <li onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li></a></li>
         </ul>
-    </nav> 
-    <div class="home-img">
-        <img src="haha.jpg" alt="Description of the image" style="width: 300px; height: 300px; border-radius: 50%;">
-
-            
+    </nav>
+    <div class="pic">
+        <image src="logo-removebg-preview.png" alt="svcc" width="200" heigth="300">
     </div>
-    <section class="home">
+    <div class="text">
+    <h2>Successful!</h2>
+    <h3>WELCOME OUR DEAR PROFESSOR TO SVCC PORTAL SYSTEM.</h3>
+    <p>Please note that every activity is monitored closely. For any problem in the system, contact System Administrator for details. Click one of the options to select operation.
 
-        <div class="home-content">
-            <h1>Hi, It's <span>Professor name</span></h1>
-            <h3 class="typing-text">I'm a <span>  INFORMATION TECHNOLOGY major</span></h3>
-            <p>"Teaching is my best decision i made." </p>
-            <p>"The price of excellence is discipline. The cost of mediocrity is disappointment."</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"> </i></a>
-                <a href="#"><i class="fa-brands fa-github"> </i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"> </i></a>
-                <a href="#"><i class="fa-brands fa-instagram"> </i></a>
-            </div>
-        </div>
-    </section>
+        It is recommended to logout by clicking the logout button everytime you leave your Computer.
+        
+    </div>
     <script>
         function showSidebar(){
             const sidebar = document.querySelector('.sidebar')
@@ -61,6 +46,5 @@
             sidebar.style.display = 'none'
         }
     </script>
-
 </body> 
 </html>
