@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     min-height: 100vh;
     background-image: url(hehe.png);
     background-size: cover;
@@ -10,21 +11,25 @@ body{
     background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-nav{
+
+nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-nav ul{
+
+nav ul {
     width: 100%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-nav li{
+
+nav li {
     height: 50px;
 }
-nav a{
+
+nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -32,13 +37,16 @@ nav a{
     align-items: center;
     color: black;
 }
-nav a:hover{
+
+nav a:hover {
     background-color: #f0f0f0;
 }
-nav li:first-child{
+
+nav li:first-child {
     margin-right: auto;
 }
-.sidebar{
+
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -53,31 +61,63 @@ nav li:first-child{
     align-items: flex-start;
     justify-content: flex-start;
 }
-.sidebar li{
+
+.sidebar li {
     width: 100%;
 }
-.sidebar a{
+
+.sidebar a {
     width: 100%;
 }
+
 .home-img {
-    text-align: center; /* Center the image */
+    text-align: center;
     margin-top: 50px;
 }
 
 .profile-img {
-    width: 200px; /* Set width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: make it circular */
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.home-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .home-img {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 600px) {
     .profile-img {
-        width: 150px; /* Smaller width for mobile */
+        width: 150px;
+    }
 
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-content {
+        padding: 0 15px;
+        font-size: 16px;
     }
 }
-
-.home-content {
-    text-align: center; /* Center the content */
-}
-
