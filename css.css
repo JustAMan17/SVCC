@@ -1,9 +1,9 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     min-height: 100vh;
     background-image: url(hehe.png);
     background-size: cover;
@@ -11,21 +11,25 @@ body{
     background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-nav{
+
+nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-nav ul{
+
+nav ul {
     width: 100%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-nav li{
+
+nav li {
     height: 50px;
 }
-nav a{
+
+nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -33,13 +37,16 @@ nav a{
     align-items: center;
     color: black;
 }
-nav a:hover{
+
+nav a:hover {
     background-color: #f0f0f0;
 }
-nav li:first-child{
+
+nav li:first-child {
     margin-right: auto;
 }
-.sidebar{
+
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -54,19 +61,21 @@ nav li:first-child{
     align-items: flex-start;
     justify-content: flex-start;
 }
-.sidebar li{
+
+.sidebar li {
     width: 100%;
 }
-.sidebar a{
+
+.sidebar a {
     width: 100%;
 }
+
 .courses {
-    width: 80%;
+    width: 90%;
     height: auto;
     background-color: #9D7D14;
     backdrop-filter: blur(1px);
     box-shadow: 0 0 10px rgb(68, 0, 0);
-    background: transparent;
     color: black;
     padding: 1rem;
     border-radius: 10px;
@@ -75,9 +84,11 @@ nav li:first-child{
     margin: 0 auto;
     margin-top: 50px;
 }
-.courses h2{
+
+.courses h2 {
     text-align: center;
 }
+
 .courses .cs {
     background: #0056b3;
     display: grid;
@@ -88,54 +99,98 @@ nav li:first-child{
     margin-top: 20px;
     height: 50px;
 }
-.tm{
+
+.tm {
     margin-top: 20px;
     text-align: left;
 }
+
 @media (min-width: 600px) {
     .courses .cs {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-.cs a{
+
+.cs a {
     color: #000000;
 }
-table{
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 60%;
-    height: 400px;
-    box-shadow: 0 0 20px rgb(68, 0, 0);
-}
-th {
-    text-align: lefts;
-}
-.table{
-    text-align: left;
 
+table {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgb(68, 0, 0);
+    overflow-x: auto;
 }
-.pic{
+
+th {
+    text-align: left;
+}
+
+.table {
+    text-align: left;
+}
+
+.pic {
     margin-top: 20px;
     text-align: center;
     margin-bottom: 30px;
 }
+
 .text {
     text-align: center;
     margin: 0 auto;
-    width: 80%; /* Optional: Set a width to limit the text width */
+    width: 90%;
 }
-h3{
-    margin-top: 30px;
-}
-p{
-    margin-top: 40px;
-}
-h1{
+
+h3, h1, p {
     margin-top: 20px;
+    padding: 0 10px;
 }
-h3{
-    margin-top: 20px;
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .courses {
+        width: 100%;
+    }
+
+    .courses .cs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses {
+        padding: 0.5rem;
+    }
+
+    .courses h2 {
+        font-size: 18px;
+    }
+
+    .courses .cs {
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0 15px;
+    }
+
+    h3, h1, p {
+        font-size: 16px;
+    }
+
+    table {
+        width: 90%;
+    }
 }
